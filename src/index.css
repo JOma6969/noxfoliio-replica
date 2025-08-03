@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.ttf");
+}
+
+body,
+html {
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slide-in-btn {
+  animation-name: slideIn;
+  animation-duration: 500ms;
+  animation-timing-function: forwards;
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
