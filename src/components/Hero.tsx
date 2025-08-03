@@ -26,8 +26,10 @@ const Hero = () => {
         <h2 className="!text-[#f5f5f5]/35 font-semibold text-[35px]">
           Hello, I'm
         </h2>
-        <h1 className="text-[#c6ff00] font-bold text-[54px]">Roy C. Jones</h1>
-        <h3 className="text-[54px] mb-4">Web Designer.</h3>
+        <h1 className="text-[#c6ff00] font-bold text-[42px] lg:text-[54px]">
+          Roy C. Jones
+        </h1>
+        <h3 className="lg:text-[54px]  text-[42px] mb-4">Web Designer.</h3>
         <p className="w-[394px] text-[#b1b1b1]">
           We denounce with righteous indignation dislike demoralized by the
           charms of pleasure
