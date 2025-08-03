@@ -11,6 +11,7 @@ import Testimonials from "./components/Testimonials";
 import Pricings from "./components/Pricings";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
+import Clients from "./components/Clients";
 // import Footer from "./components/Footer";
 
 const App = () => {
@@ -76,6 +77,7 @@ const App = () => {
         <Pricings />
         <Contact />
         <Blog />
+        <Clients />
       </main>
       <footer>{/* <Footer /> */}</footer>
     </div>

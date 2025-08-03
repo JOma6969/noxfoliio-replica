@@ -73,13 +73,17 @@ const Testimonials = () => {
       </div>
 
       {/* last column */}
-      <div className="lg:w-[759px] mt-10">
+      <div className="lg:w-[798px] mt-10">
         <Swiper
-          spaceBetween={55}
+          spaceBetween={20}
           slidesPerView={1}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-          breakpoints={{ 1024: { width: 1024, slidesPerView: 2 } }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+          }}
         >
           {testimonialData.map((item, i) => (
             <SwiperSlide
