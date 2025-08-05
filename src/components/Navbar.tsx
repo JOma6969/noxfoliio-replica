@@ -1,9 +1,7 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import HoverCard from "./HoverCard";
-import { useGSAP } from "@gsap/react";
 import { IoIosMenu } from "react-icons/io";
-import gsap from "gsap";
 
 type linkType = {
   label: string;
@@ -23,8 +21,8 @@ const Navbar: React.FC<{ shouldShowFixedNav: boolean }> = ({
   const [shouldShowHoverCard, setShouldShowHoverCard] = useState(false);
   // index to access the menu to be displayed
   const [menuToShow, setMenuToShow] = useState<null | number>(null);
-  const navRef = useRef<HTMLDivElement>(null);
-  const navRef2 = useRef<HTMLDivElement>(null);
+  // const navRef = useRef<HTMLDivElement>(null);
+  // const navRef2 = useRef<HTMLDivElement>(null);
 
   const links: linkType[] = [
     {
@@ -68,17 +66,6 @@ const Navbar: React.FC<{ shouldShowFixedNav: boolean }> = ({
     },
   ];
 
-  useGSAP(() => {
-    if (shouldShowFixedNav && navRef.current) {
-      gsap.fromTo(
-        navRef.current,
-        { y: -20 },
-        { y: 0, duration: 1, ease: "sine.inOut" }
-      );
-    }
-    gsap.fromTo(navRef2.current, { y: -10 }, { y: 5, duration: 1 });
-  }, [shouldShowFixedNav]);
-
   // function to handle what menu should show
   const hoverCard = (i: number) => {
     if (!shouldShowHoverCard && links[i].subMenu) {
@@ -94,10 +81,9 @@ const Navbar: React.FC<{ shouldShowFixedNav: boolean }> = ({
 
   return (
     <div
-      ref={shouldShowFixedNav ? navRef : navRef2}
-      className={`text-white font-[600] px-4 py-6 flex items-center justify-between ${
+      className={`text-white font-[600] px-4 pb-6 flex items-center justify-between ${
         shouldShowFixedNav
-          ? "fixed-nav w-full fixed z-100 bg-[#1f1f1f] top-0"
+          ? "vertical-slide-in w-full pt-6 fixed z-100 bg-[#1f1f1f] top-0"
           : ""
       }`}
     >

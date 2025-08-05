@@ -26,11 +26,11 @@ const Blog = () => {
       <h1 className="capitalize text-center text-[28px] lg:text-[48px]">
         latest news & <span className="text-[#c6ff00]">blog</span>
       </h1>
-      <div className="grid lg:grid-cols-2 mt-[70px] gap-7">
+      <div className="lg:grid lg:grid-cols-2 mt-[70px] gap-7">
         {data.map((item, i) => (
           <div
             key={i}
-            className="bg-[rgb(31,31,31)] border border-[rgb(53,53,53)] hover:border-[#c6ff00] lg:flex p-[10px] group rounded-[15px]"
+            className="bg-[rgb(31,31,31)] mb-7 lg:mb-0 border border-[rgb(53,53,53)] hover:border-[#c6ff00] lg:flex p-[10px] group rounded-[15px]"
           >
             {/* first column that holds the img */}
             <div className="lg:w-[240px] h-[205px] overflow-hidden rounded-[10px] relative">

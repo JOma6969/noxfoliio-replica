@@ -17,9 +17,29 @@ html {
 
 .slide-in-btn {
   animation-name: slideIn;
-  animation-duration: 500ms;
+  animation-duration: 1200ms;
   animation-timing-function: forwards;
   opacity: 1;
+}
+
+.vertical-slide-in {
+  animation-name: slideInVertically;
+  animation-timing-function: forwards;
+  opacity: 1;
+  animation-duration: 1200ms;
+}
+
+@keyframes slideInVertically {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideIn {
@@ -32,5 +52,24 @@ html {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+.slide-out {
+  animation-name: slideOut;
+  animation-duration: 700ms;
+  animation-timing-function: forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200px);
   }
 }

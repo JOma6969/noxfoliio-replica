@@ -44,7 +44,7 @@ const Services = () => {
             className="group border hover:border-[#c6ff00] border-[rgb(53,53,53)] lg:flex bg-[rgb(31,31,31)] px-[50px] py-[35px] rounded-[15px]"
           >
             <h3 className="text-2xl mr-[45px] text-[#b1b1b1]">0{i + 1}</h3>
-            <div className="lg:flex my-7 lg:my-7 justify-between">
+            <div className="lg:flex my-7 lg:my-0 justify-between">
               <div>
                 <h1 className="text-2xl capitalize mb-[10px]">{item.ttl}</h1>
                 <p className="text-[#b1b1b1]">{item.details}</p>
